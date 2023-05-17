@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: coffee
+  config:
+    import: 'optional:configserver:http://localhost:8888'
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
